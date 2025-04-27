@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Redirect all paths to index.html so Angular can handle it
+      (function() {
+        var redirectTo = '/' + location.pathname.replace(/^\/+/, '');
+        var newUrl = location.origin + '/index.html' + '?redirect=' + encodeURIComponent(redirectTo);
+        location.replace(newUrl);
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
